@@ -1,0 +1,219 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.navbar {
+  color: white;
+  background-color: black;
+  font-size: 40px;
+}
+.navbar ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.navbar li:nth-child(3n + 1) {
+  background-color: white;
+}
+/* .navbar li:nth-child(odd) {
+  background-color: grey;
+} */
+/* 
+.navbar ul li:not(:first-of-type) {
+  background-color: green;
+}
+.navbar ul:first-child {
+  background: blue;
+} */
+.navbar ul li a {
+  color: red;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 10px auto;
+  background-color: yellow;
+  height: 100vh;
+}
+
+.container > h4 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 30px;
+  color: black;
+}
+
+.flex-container-two {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 100%;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .flex-container-two {
+    flex-direction: column;
+  }
+  .container {
+    max-width: 740px;
+    /* padding: 40px 10px; */
+  }
+}
+
+@media (max-width: 425px) {
+  .container {
+    max-width: 100%;
+    /* padding: 40px 10px; */
+    margin: unset;
+  }
+}
+
+/*
+#heading-two {
+  margin-top: -80px;
+  background-color: orange;
+  color: blue;
+  border: 10px solid green;
+}
+#first-box {
+  background-color: pink !important;
+  display: block;
+}
+/* #first-box::after {
+  content: '';
+  padding: 15px;
+  margin: 10px;
+  background: #000;
+} */
+/* .box-one.box {
+  background: blue !important;
+  margin-right: 50px;
+  padding: 5px;
+}
+a {
+  background-color: orange;
+}
+.box-two {
+  background: yellow;
+  margin-left: 100px;
+  padding: 5px;
+  width: 80px;
+  height: 100px;
+} */
+/* */
+/* 
+.card {
+  margin-right: 40px;
+}
+.card:not(.last-card) {
+  margin-right: 0;
+} */
+/* div#card-one.card:active:first::after {
+  background: red;
+} */
+/* 0(!important)-0(inline styles )-1(id)-3(attr,classes,pseudo class )-2(psuedo element,elements)  */
+
+/*  here we are trying to target with a attribute  */
+/* input[type='text'] {
+  color: red;
+} */
+/* 0-1-0 */
+/*  here we are trying to target with a class */
+/* 0-1-0 */
+/* .form-control {
+  color: green;
+} */
+
+/* 0(!important)-0(inline styles )-1(id)-3(attr,classes,pseudo class )-2(psuedo element,elements)  */
+/* 
+input#username.form-control.input-control {
+  background: orange;
+}
+
+#username {
+  background: pink;
+} */
+
+/* 0-0-1-0-0(id) */
+
+/* input.form-control.input-control {
+  background: purple;
+} */
+input[type='text'] {
+  background: yellow;
+}
+.form-control {
+  background: blue;
+}
+
+/* 0-0-0-1-1(classname, pseudo class ) */
+
+/* 0-0-0-1-1(classname, pseudo class ) */
+
+/* input {
+  background: red !important;
+} */
+/* 1-0-0-0-1(element,  pseudo elements ) */
+
+/* flex box  */
+
+.flex-container {
+  display: flex;
+  /* flex-direction: nowrap; */
+  /* justify-content: space-evenly; */
+  /* short form of flex-direction & flex-wrap  */
+  flex-flow: row wrap;
+}
+.box {
+  padding: 50px;
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  width: 325px;
+
+  /* white-space: nowrap; */
+}
+.box-1 {
+  background-color: red;
+}
+.box-2 {
+  background: #000;
+  /* margin-left: auto; */
+}
+.box-3 {
+  background-color: blue;
+  /* margin-left: auto; */
+}
+.box-4 {
+  background-color: green;
+}
+.box-5 {
+  background: orange;
+}
+.box-6 {
+  background: brown;
+}
+
+@media (max-width: 1024px) {
+  .flex-container {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .box {
+    margin-right: 40px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .box:last-of-type {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 765px) {
+  .box {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}

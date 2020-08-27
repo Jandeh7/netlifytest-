@@ -1,0 +1,103 @@
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  font-size: 20px;
+  line-height: 1.6;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  display: flex;
+  width: 180px;
+  position: relative;
+  height: 80px;
+}
+.loader span {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: purple;
+}
+.loader span {
+  animation-name: jump;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-duration: 750ms;
+  animation-direction: alternate;
+  perspective-origin: center;
+  perspective: 1500px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.loader span.shade {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 30px;
+  bottom: -20px;
+  border-radius: 2px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  background-color: rgb(59, 58, 58);
+  height: 1px;
+  animation-name: stretch;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(1, 0.54, 0.77, 1.38);
+  animation-duration: 750ms;
+  animation-direction: alternate;
+}
+
+.loader span:nth-child(1) {
+  background: blue;
+}
+
+.loader span:nth-child(2) {
+  animation-delay: 250ms;
+  background: pink;
+}
+.loader span:nth-child(3) {
+  animation-delay: 500ms;
+  left: 90px;
+  bottom: 0;
+}
+
+.loader span:nth-child(4) {
+  left: 30px;
+  bottom: 0;
+}
+.loader span:nth-child(5) {
+  left: 90px;
+  bottom: 0;
+  animation-delay: 250ms;
+}
+
+.loader span:nth-child(6) {
+  left: 150px;
+  bottom: 0;
+  animation-delay: 500ms;
+}
+
+@keyframes stretch {
+  from {
+    transform: translateX(-50%) scaleX(0);
+  }
+  to {
+    transform: translateX(-50%) scaleX(1);
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: scaleY(1) translateY(0);
+  }
+  10% {
+    transform: scaleY(1.05);
+  }
+  100% {
+    transform: scaleY(0.9) translateY(35px);
+  }
+}
